@@ -1,0 +1,8 @@
+pytest
+isort
+flake8
+pip-tools
+coverage
+pytest-cov
+pytest-django
+pytest-sugar
