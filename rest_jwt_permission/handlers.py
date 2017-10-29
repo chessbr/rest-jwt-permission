@@ -5,6 +5,8 @@ from django.utils.translation import ugettext_lazy as _
 from rest_framework import exceptions
 from rest_framework.authentication import get_authorization_header
 
+from .settings import get_setting
+
 
 def get_payload_from_scopes(scopes):
     """
@@ -16,7 +18,7 @@ def get_payload_from_scopes(scopes):
     :rtype dict
     """
     return {
-        "scopes": [scope.identifier for scope in scopes]
+        get_setting("JWT_PAYLOAD_SCOPES_KEY"): [scope.identifier for scope in scopes]
     }
 
 
@@ -27,7 +29,7 @@ def get_scopes_from_payload(payload):
     :type payload dict
     :rtype list[rest_jwt_permission.scopes.Scope]
     """
-    return payload.get("scopes", [])
+    return payload.get(get_setting("JWT_PAYLOAD_SCOPES_KEY"), [])
 
 
 def get_jwt_payload_from_request(request):

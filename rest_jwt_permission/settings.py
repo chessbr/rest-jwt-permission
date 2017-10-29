@@ -21,7 +21,10 @@ REST_JWT_PERMISSION = {
     # Handler function to get JWT payload from Request
     "GET_PAYLOAD_FROM_REQUEST_HANDLER": (
         "rest_jwt_permission.handlers.get_jwt_payload_from_request"
-    )
+    ),
+
+    # Payload key that will contain the scopes
+    "JWT_PAYLOAD_SCOPES_KEY": "scopes"
 }
 
 
