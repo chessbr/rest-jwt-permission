@@ -37,6 +37,10 @@ REST_JWT_PERMISSION = {
 
 Now you can use `JWTAPIPermission` class in your API Views through `permission_classes` property or even setting it as the default permission class in your [settings](http://www.django-rest-framework.org/api-guide/permissions/#setting-the-permission-policy)
 
+### Example
+
+For a more pratical example, check **[rest-jwt-permission-example](https://github.com/chessbr/rest-jwt-permission-example)**.
+
 ## Motivation
 
 Inspired by GitHub [Personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) and by [Auth0 API Keys blog post](https://auth0.com/blog/using-json-web-tokens-as-api-keys/), this package provides a Django Rest Framework Permission object to check permissions from JWT payloads.
@@ -115,6 +119,11 @@ Defaults to:
 **`GET_PAYLOAD_FROM_REQUEST_HANDLER`**: Handler function to get JWT payload from Request. Defaults to:
 ```
 "GET_PAYLOAD_FROM_REQUEST_HANDLER": "rest_jwt_permission.handlers.get_jwt_payload_from_request"
+```
+
+**`JWT_PAYLOAD_SCOPES_KEY`**: Payload key that will contain the scopes. Defaults to:
+```
+"JWT_PAYLOAD_SCOPES_KEY": "scopes"
 ```
 
 
