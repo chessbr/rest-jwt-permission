@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.4"
+  - "3.5"
+install:
+  - pip install -U pip
+  - pip install coveralls
+  - pip install -r requirements.txt
+  - pip install -r dev-requirements.txt
+  - pip install -e .
+script:
+  - py.test -ra -vvv --cov-config .coveragerc --cov rest_jwt_permission rest_jwt_permission_tests
+after_success: coveralls
