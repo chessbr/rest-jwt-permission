@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from functools import lru_cache
-
+from django.utils.lru_cache import lru_cache
 from rest_framework.schemas import EndpointInspector
 
 from rest_jwt_permission.utils import get_role_for, get_view_role

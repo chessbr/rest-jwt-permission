@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from functools import lru_cache
-
+from django.utils.lru_cache import lru_cache
 from django.utils.translation import ugettext_lazy as _
 
 from .base import ScopeProviderBase
