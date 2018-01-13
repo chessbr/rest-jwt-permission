@@ -1,13 +1,16 @@
 language: python
 python:
+  - "2.7"
   - "3.4"
   - "3.5"
 install:
   - pip install -U pip
-  - pip install coveralls
+  - pip install coveralls isort flake8
   - pip install -r requirements.txt
   - pip install -r dev-requirements.txt
   - pip install -e .
 script:
+  - isort -sp . --check-only rest_jwt_permission/*.py
+  - flake8 rest_jwt_permission
   - py.test -ra -vvv --cov-config .coveragerc --cov rest_jwt_permission rest_jwt_permission_tests
 after_success: coveralls
