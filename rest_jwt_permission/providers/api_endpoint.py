@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.utils.lru_cache import lru_cache
-from rest_framework.schemas import EndpointInspector
+from rest_framework.schemas.generators import EndpointEnumerator
 
 from rest_jwt_permission.utils import get_role_for, get_view_role
 
@@ -12,7 +12,7 @@ class APIEndpointScopeProvider(ScopeProviderBase):
     def get_available_scopes(self):
         from rest_jwt_permission.scopes import APIScope
 
-        epi = EndpointInspector()
+        epi = EndpointEnumerator()
         scopes = []
 
         for (path, method, callback) in epi.get_api_endpoints():
