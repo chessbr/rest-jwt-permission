@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import jwt
-from django.utils.text import force_text
+from django.utils.encoding import force_text
 
 from rest_jwt_permission.handlers import get_jwt_payload_from_request, get_payload_from_scopes, get_scopes_from_payload
 from rest_jwt_permission.scopes import SimpleScope

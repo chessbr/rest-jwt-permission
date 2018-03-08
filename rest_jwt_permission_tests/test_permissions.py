@@ -3,7 +3,7 @@ import jwt
 from django.conf.urls import include, url
 from django.contrib.auth import get_user_model
 from django.test.utils import override_settings
-from django.utils.text import force_text
+from django.utils.encoding import force_text
 from rest_framework import response, routers, serializers, status, views, viewsets
 from rest_framework.decorators import api_view, detail_route, list_route, permission_classes
 from rest_framework.test import APIClient
