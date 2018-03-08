@@ -145,9 +145,8 @@ pip install dev-requirements.txt && py.tets --cov
 
 # Compatibility
 
-* Python >= 2.7
-* Django >= 1.10
-* Django Rest Framework >= 3.6
+* Django >= 2.0
+* Django Rest Framework >= 3.7
 
 # License
 
