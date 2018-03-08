@@ -34,7 +34,6 @@ def test_api_endpoint_scope_permission_provider():
     ):
         scopes = get_all_permission_providers_scopes()
         expected_identifiers = [
-            'apirootview:get',
             'function_endpoint:get',
             'function_endpoint:post',
             'simplemodelviewset:list:get',
