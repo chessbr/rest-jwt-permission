@@ -16,6 +16,7 @@ setup(
     packages=find_packages(),
     install_requires=[],
     long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/tend/rest-jwt-permission",
     classifiers=[
         "Programming Language :: Python",
