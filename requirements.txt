@@ -7,5 +7,5 @@
 django==2.0.2
 djangorestframework-jwt==1.11.0
 djangorestframework==3.7.7
-pyjwt==1.5.3              # via djangorestframework-jwt
+pyjwt==2.4.0              # via djangorestframework-jwt
 pytz==2018.3              # via django
